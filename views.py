@@ -13,10 +13,12 @@ from flask import Flask, request
 from twilio.rest import Client
 
 
+
 @app.route('/')
 @app.route('/home')
 def index():
-    return render_template('test.html')
+    
+    return render_template('Number_Log_Page.html')
 
 @app.route('/contact')
 def contact():
