@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-OMnx+VrX9hF8yV7Ku6z1/T+7mGJvPZ6mGWeN+RIMoIP9g/DbE/2J1q3qTYCEzNpNc+sJ8wqvYroq3CJ0Dnb9Bg==" crossorigin="" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-jG5imB+Jpsh4z4f4x+F+SvI8NVrpE11f27hKj9ft+UNs1xxT+bJhFAvMkGiHjqw0D+q6UqVKgJxqb6+XvxzOjQ==" crossorigin=""></script>
+    <style>
+        #map {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <script>
+        console.log('hi1');
+        const tester = async () => {
+            console.log('hi1');
+            const data = await fetch('/data');
+            const viewable = await data.json();
+            console.log(viewable);
+            console.log('hi2');
+        }
+
+        tester();
+    </script>
+    <h1>My App</h1>
+</body>
+</html>

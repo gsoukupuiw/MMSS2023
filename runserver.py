@@ -1,8 +1,15 @@
 """
 This script runs the FlaskWebProjectMMSS application using a development server.
 """
+import requests
+import exifread
+from io import BytesIO
+import sqlite3
+from sqlite3 import Error
+from geopy import Point
 
 from os import environ
+
 from FlaskWebProjectMMSS import app
 
 if __name__ == '__main__':

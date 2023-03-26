@@ -31,9 +31,12 @@
     <Compile Include="EXIF2DB.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="WebScrape3.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="FlaskWebProjectMMSS\__init__.py" />
-    <Compile Include="FlaskWebProjectMMSS\views.py" />
+    <Compile Include="views.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FlaskWebProjectMMSS\" />
@@ -44,6 +47,7 @@
     <Folder Include="FlaskWebProjectMMSS\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FlaskWebProjectMMSS\templates\test.html" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskWebProjectMMSS\static\content\bootstrap.css" />
     <Content Include="FlaskWebProjectMMSS\static\content\bootstrap.min.css" />
