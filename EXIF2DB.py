@@ -13,7 +13,7 @@ def githubstuff():
     # Replace the username, repository name and access token with your own values
     username = "gsoukupuiw"
     repository_name = "MMSS2023"
-    access_token = "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"
+    access_token = "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"
 
     # Authenticate with the GitHub API using an access token
     g = Github(access_token)

@@ -60,7 +60,8 @@ const sendNumber = async () => {
     await fetch('/send_text', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone: phoneNumber })1``
-});
+        body: JSON.stringify({ phone: phoneNumber })
+    });
+}
 
 export {locateUser, fail};
