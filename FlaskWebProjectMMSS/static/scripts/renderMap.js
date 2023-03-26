@@ -1,4 +1,5 @@
 import { getPoints } from './getPoints.js';
+import {phoneNumber } from './app.js'
 let userCoords;
 let map;
 let userMarker;
@@ -43,7 +44,9 @@ const locateUser = (position) =>
             circle.setStyle({color: 'green', fillColor: '#0f3'});
         } else {
             const colorValue = gradientScale(distanceToCenter).hex();
-            circle.setStyle({fillColor: colorValue});
+            circle.setStyle({ fillColor: colorValue });
+            //func to send # and picture to b.e.
+            sendNumber();
         }
     });
 }
@@ -53,5 +56,11 @@ const fail = () =>
     alert('Could not get your position');
 }
 
+const sendNumber = async () => {
+    await fetch('/send_text', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone: phoneNumber })1``
+});
 
 export {locateUser, fail};

@@ -1,2 +1,0 @@
-// globals.js
-let userPhoneNumber = '';

@@ -13,7 +13,7 @@ def githubstuff():
     # Replace the username, repository name and access token with your own values
     username = "gsoukupuiw"
     repository_name = "MMSS2023"
-    access_token = "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"
+    access_token = "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"
 
     # Authenticate with the GitHub API using an access token
     g = Github(access_token)
@@ -117,7 +117,7 @@ def remove_duplicates(db_file, unique_column):
 
 
 def doAthing():
-    remove_duplicates('photos.db','url')
+    
     masterurl = "https://github.com/gsoukupuiw/MMSS2023/blob/master/Images"
     file_contents = githubstuff()
     i = 0
@@ -128,4 +128,4 @@ def doAthing():
         print(passurl)
         uhhidk(passurl)
         i+=1
-
+    remove_duplicates('photos.db','url')
