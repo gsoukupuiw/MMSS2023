@@ -2,11 +2,6 @@ import { getPoints } from './getPoints.js';
 let coords;
 let map;
 
-const renderingMap = () =>
-{
-    navigator.geolocation.getCurrentPosition(locateUser, fail);
-}
-
 const locateUser = (position) =>
 {
     const { latitude, longitude } = position.coords;
@@ -28,21 +23,15 @@ const locateUser = (position) =>
     //creating markers
     getPoints.forEach(point =>
     {
-        L.marker([point[0], point[1]]).addTo(map)
-            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-            .openPopup();
         L.circle([point[0], point[1]],
             {
                 radius: 30,
                 stroke: false,
                 color: 'blue',
-                fillColor: 'lightblue',
                 fillOpacity: 0.5
             })
             .addTo(map);
     });
-
-    // locateUser();
 }
 
 
@@ -56,4 +45,4 @@ const fail = () =>
 
 
 
-export {locateUser, renderingMap};
+export {locateUser, fail};

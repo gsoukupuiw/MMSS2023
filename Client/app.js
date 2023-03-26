@@ -1,11 +1,9 @@
 'use strict'
 
-import {locateUser, renderingMap} from './renderMap.js';
+import {locateUser, fail} from './renderMap.js';
 
 
 if (navigator.geolocation)
 {
-    renderingMap();
+    navigator.geolocation.watchPosition(locateUser, fail)
 }
-
-setInterval(renderingMap, 10000);
