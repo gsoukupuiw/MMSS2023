@@ -15,11 +15,11 @@ const locateUser = (position) =>
     console.log(coords);
     if(!map)
     {
-        map = L.map('map').setView(coords, 13);
+        map = L.map('map').setView(coords, 30);
     }
     else
     {
-        map.setView(coords, 13)
+        map.setView(coords, 20)
     }
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -27,12 +27,20 @@ const locateUser = (position) =>
 
     //creating markers
     getPoints.forEach(point =>
-        {
-            L.marker([point[0], point[1]]).addTo(map)
+    {
+        L.marker([point[0], point[1]]).addTo(map)
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
             .openPopup();
-        }
-    );
+        L.circle([point[0], point[1]],
+            {
+                radius: 30,
+                stroke: false,
+                color: 'blue',
+                fillColor: 'lightblue',
+                fillOpacity: 0.5
+            })
+            .addTo(map);
+    });
 
     // locateUser();
 }
